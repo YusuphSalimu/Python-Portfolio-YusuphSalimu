@@ -1,0 +1,15 @@
+services:
+  # Static Site Service
+  - type: web
+    name: python-portfolio
+    env: static
+    rootDir: .
+    buildCommand: "echo 'Static site - no build required'"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: "18"
