@@ -742,3 +742,68 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+
+/* Services Page Styles */
+.services__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 4rem;
+  margin-top: 4rem;
+  justify-items: center; }
+
+.service-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  max-width: 40rem;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .service-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15); }
+
+.service-icon {
+  text-align: center;
+  margin-bottom: 2rem; }
+
+.service-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem; }
+
+.service-description {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 2rem;
+  text-align: center; }
+
+.service-features {
+  list-style: none;
+  margin-bottom: 2rem; }
+  .service-features li {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative; }
+    .service-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #28a745;
+      font-weight: bold; }
+
+.service-tech {
+  font-size: 1.5rem;
+  color: #777;
+  text-align: center;
+  font-style: italic; }
+
+@media only screen and (max-width: 56.25em) {
+  .services__content {
+    grid-template-columns: 1fr;
+    gap: 3rem; } }
