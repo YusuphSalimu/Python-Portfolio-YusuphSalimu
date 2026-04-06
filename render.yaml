@@ -1,15 +1,19 @@
 services:
   # Static Site Service
   - type: web
-    name: python-portfolio
+    name: yusuph-python-portfolio
     env: static
-    rootDir: .
-    buildCommand: "echo 'Static site - no build required'"
+    buildCommand: ""
     staticPublishPath: .
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    startCommand: ""
     envVars:
       - key: NODE_VERSION
         value: "18"
+    headers:
+      - path: "/*"
+        name: "Cache-Control"
+        value: "public, max-age=31536000"
+    routes:
+      - type: rewrite
+        source: "/*"
+        destination: "/index.html"
