@@ -3,7 +3,6 @@ services:
   - type: web
     name: yusuph-python-portfolio
     env: static
-    buildCommand: ""
     staticPublishPath: .
     envVars:
       - key: NODE_VERSION
