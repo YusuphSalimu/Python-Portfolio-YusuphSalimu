@@ -5,7 +5,6 @@ services:
     env: static
     buildCommand: ""
     staticPublishPath: .
-    startCommand: ""
     envVars:
       - key: NODE_VERSION
         value: "18"
