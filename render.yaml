@@ -1,5 +1,4 @@
 services:
-  # Static Site Service
   - type: web
     name: yusuph-python-portfolio
     env: static
