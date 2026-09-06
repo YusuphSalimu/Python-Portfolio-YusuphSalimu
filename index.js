@@ -36,3 +36,31 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+// --- Theme Toggle ---
+const themeToggleBtn = document.getElementById('theme-toggle')
+const currentTheme = localStorage.getItem('theme') || 'dark'
+
+if (currentTheme === 'light') {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (themeToggleBtn) themeToggleBtn.textContent = '☀️'
+} else {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (themeToggleBtn) themeToggleBtn.textContent = '🌙'
+}
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme')
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem('theme', 'dark')
+      themeToggleBtn.textContent = '🌙'
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem('theme', 'light')
+      themeToggleBtn.textContent = '☀️'
+    }
+  })
+}
+
