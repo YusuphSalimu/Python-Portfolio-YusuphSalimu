@@ -2,17 +2,18 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background: #000;
-  background: #fff;
-  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
 
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 5rem;
+    padding: 1.5rem 5rem;
     @include respond(tab-port) {
-      padding: 0 2rem;
+      padding: 1.2rem 2rem;
     }
   }
 
@@ -20,24 +21,24 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #333;
+    color: var(--text-primary);
     transition: color .3s;
 
     &:hover {
-      color: $themeClrPrimary;
+      color: var(--accent-primary);
     }
   }
   &__logo-img-cont {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50px;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
     overflow: hidden;
     margin-right: 1.5rem;
-    background: $themeClrPrimary;
+    background: var(--accent-primary);
 
     @include respond(tab-port) {
-      width: 4.5rem;
-      height: 4.5rem;
+      width: 4rem;
+      height: 4rem;
       margin-right: 1.2rem;
     }
   }
@@ -53,37 +54,65 @@
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
+    font-family: var(--font-display);
+  }
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
   }
   &__links {
     display: flex;
+    align-items: center;
     @include respond(phone) {
       display: none;
     }
   }
   &__link {
-    padding: 2.2rem 3rem;
+    padding: 1.5rem 2rem;
     display: inline-block;
-    font-size: 1.6rem;
-    color: #333;
+    font-size: 1.5rem;
+    color: var(--text-primary);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 700;
+    font-weight: 600;
     transition: color .3s;
 
     &:hover {
-      color: $themeClrPrimary;
+      color: var(--accent-primary);
     }
     @include respond(tab-port) {
-      padding: 3rem 1.8rem;
-      font-size: 1.5rem;
+      padding: 1.5rem 1.2rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__theme-toggle {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+
+    &:hover {
+      background: var(--accent-primary);
+      color: #fff;
+      transform: scale(1.05);
     }
   }
 
   &__main-ham-menu-cont {
     display: none;
     width: 3rem;
-
-    padding: 2.2rem 0;
+    padding: 1rem 0;
 
     @include respond(phone) {
       display: block;
@@ -91,22 +120,23 @@
   }
   &__main-ham-menu {
     width: 100%;
+    filter: invert(var(--icon-invert, 0));
   }
   &__main-ham-menu-close {
     width: 100%;
+    filter: invert(var(--icon-invert, 0));
   }
 
   &__sm-menu {
-    background: #fff;
+    background: var(--bg-secondary);
     position: absolute;
     width: 100%;
     top: 100%;
     visibility: hidden;
     opacity: 0;
     transition: all .3s;
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--border-color);
 
     &--active {
       visibility: hidden;
@@ -122,23 +152,23 @@
     a {
       display: block;
       text-decoration: none;
-      padding: 2.5rem 3rem;
+      padding: 2rem 3rem;
       font-size: 1.6rem;
-      color: #333;
+      color: var(--text-primary);
       text-align: right;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--border-color);
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
       transition: color .3s;
       
       &:hover {
-        color: $themeClrPrimary;
+        color: var(--accent-primary);
       }
     }
     &:first-child {
       a {
-        border-top: 1px solid #eee;
+        border-top: 1px solid var(--border-color);
       }
     }
   }
@@ -146,3 +176,4 @@
     border-bottom: 0;
   }
 }
+
