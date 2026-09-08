@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       filtered.forEach(project => {
-        const row = document.createElement('div')
+        const row = document.createElement('article')
         row.className = 'projects__row'
         
         const techBadges = project.technologies && project.technologies.length > 0 
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         row.innerHTML = `
           <div class="projects__row-img-cont">
-            <img src="${project.image}" alt="${project.title} project screenshot" class="projects__row-img" loading="lazy" />
+            <img src="${project.image}" alt="${project.title} project screenshot" class="projects__row-img" loading="lazy" decoding="async" />
           </div>
           <div class="projects__row-content">
             <span style="font-size: 1.3rem; font-weight: 700; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; display: inline-block;">${project.category}</span>
@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ${techBadges}
             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
               <a href="${project.caseStudyUrl}" class="btn btn--med btn--theme dynamicBgClr" aria-label="View ${project.title} case study">View Project</a>
-              ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--med btn--theme-inv" style="border: 2px solid var(--border-color); color: var(--text-primary); padding: 1.2rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.4rem;">View Code</a>` : ''}
-              ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--med btn--theme-inv" style="border: 2px solid var(--accent-primary); color: var(--accent-primary); padding: 1.2rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.4rem;">Live Demo</a>` : ''}
+              ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--med btn--theme-inv" style="border: 2px solid var(--border-color); color: var(--text-primary); padding: 1.2rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.4rem;" aria-label="View ${project.title} source code on GitHub">View Code</a>` : ''}
+              ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--med btn--theme-inv" style="border: 2px solid var(--accent-primary); color: var(--accent-primary); padding: 1.2rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.4rem;" aria-label="View live demo of ${project.title}">Live Demo</a>` : ''}
             </div>
           </div>
         `
