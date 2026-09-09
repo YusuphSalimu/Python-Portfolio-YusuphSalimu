@@ -30,7 +30,7 @@
           </div>
           <span class="header__logo-sub">Yusuph Salimu</span>
         </div>
-        <div class="header__main">
+                <nav class="header__main" aria-label="Main navigation">
           <ul class="header__links">
             <li class="header__link-wrapper">
               <a href="./index.html" class="header__link"> Home </a>
@@ -52,18 +52,18 @@
           <div class="header__main-ham-menu-cont">
             <img
               src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
+              alt="Open menu"
               class="header__main-ham-menu"
             />
             <img
               src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
+              alt="Close menu"
               class="header__main-ham-menu-close d-none"
             />
           </div>
-        </div>
+        </nav>
       </div>
-      <div class="header__sm-menu">
+            <nav class="header__sm-menu" aria-label="Mobile navigation">
         <div class="header__sm-menu-content">
           <ul class="header__sm-menu-links">
             <li class="header__sm-menu-link">
@@ -83,7 +83,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
@@ -177,25 +177,27 @@
       <div class="main-container">
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
+                        <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Connect</span>
             </h2>
-            <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yusuph-salimu-7818333aa/">
+            <nav class="main-footer__social-cont" aria-label="Social media links">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/yusuph-salimu-7818333aa/" aria-label="LinkedIn Profile">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/linkedin-ico.png"
-                  alt="LinkedIn icon"
+                  alt=""
+                  aria-hidden="true"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/YusuphSalimu">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/YusuphSalimu" aria-label="GitHub Profile">
                 <img
                   class="main-footer__icon main-footer__icon--mr-none"
                   src="./assets/png/github-ico.png"
-                  alt="GitHub icon"
+                  alt=""
+                  aria-hidden="true"
                 />
               </a>
-            </div>
+            </nav>
           </div>
           <div class="main-footer__row main-footer__row-2">
             <h4 class="heading heading-sm text-lt">Yusuph Salimu</h4>

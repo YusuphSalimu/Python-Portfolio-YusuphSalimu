@@ -11,12 +11,13 @@ const headerSmallMenuLinks = document.querySelectorAll('.header__sm-menu-link')
 if (hamMenuBtn && smallMenu) {
   hamMenuBtn.setAttribute('role', 'button')
   hamMenuBtn.setAttribute('tabindex', '0')
-  hamMenuBtn.setAttribute('aria-label', 'Toggle navigation menu')
+  hamMenuBtn.setAttribute('aria-label', 'Open navigation menu')
   hamMenuBtn.setAttribute('aria-expanded', 'false')
 
   const toggleMenu = () => {
     const isExpanded = smallMenu.classList.toggle('header__sm-menu--active')
     hamMenuBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false')
+    hamMenuBtn.setAttribute('aria-label', isExpanded ? 'Close navigation menu' : 'Open navigation menu')
 
     if (headerHamMenuBtn && headerHamMenuCloseBtn) {
       headerHamMenuBtn.classList.toggle('d-none', isExpanded)
@@ -38,7 +39,10 @@ if (headerSmallMenuLinks && headerSmallMenuLinks.length > 0) {
     link.addEventListener('click', () => {
       if (smallMenu) {
         smallMenu.classList.remove('header__sm-menu--active')
-        if (hamMenuBtn) hamMenuBtn.setAttribute('aria-expanded', 'false')
+        if (hamMenuBtn) {
+          hamMenuBtn.setAttribute('aria-expanded', 'false')
+          hamMenuBtn.setAttribute('aria-label', 'Open navigation menu')
+        }
       }
       if (headerHamMenuBtn) headerHamMenuBtn.classList.remove('d-none')
       if (headerHamMenuCloseBtn) headerHamMenuCloseBtn.classList.add('d-none')
@@ -132,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = document.createElement('button')
         btn.textContent = cat
         btn.className = cat === 'All' ? 'filter-btn active' : 'filter-btn'
+        btn.setAttribute('aria-pressed', cat === 'All' ? 'true' : 'false')
         btn.style.cssText = `
           padding: 0.8rem 1.6rem;
           font-size: 1.4rem;
@@ -148,9 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
           document.querySelectorAll('.filter-btn').forEach(b => {
             b.style.background = 'var(--bg-card)'
             b.style.color = 'var(--text-primary)'
+            b.setAttribute('aria-pressed', 'false')
           })
           btn.style.background = 'var(--accent-primary)'
           btn.style.color = '#ffffff'
+          btn.setAttribute('aria-pressed', 'true')
           renderProjects(cat)
         })
         projectFiltersContainer.appendChild(btn)

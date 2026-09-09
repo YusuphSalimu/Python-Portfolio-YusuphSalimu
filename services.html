@@ -40,7 +40,8 @@
           </div>
           <span class="header__logo-sub">Yusuph Salimu</span>
         </div>
-        <div class="header__main">
+
+        <nav class="header__main" aria-label="Main navigation">
           <ul class="header__links">
             <li class="header__link-wrapper">
               <a href="./index.html" class="header__link"> Home </a>
@@ -64,18 +65,22 @@
           <div class="header__main-ham-menu-cont">
             <img
               src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
+
+              alt="Open menu"
               class="header__main-ham-menu"
             />
             <img
               src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
+
+              alt="Close menu"
               class="header__main-ham-menu-close d-none"
             />
           </div>
-        </div>
+
+        </nav>
       </div>
-      <div class="header__sm-menu">
+
+      <nav class="header__sm-menu" aria-label="Mobile navigation">
         <div class="header__sm-menu-content">
           <ul class="header__sm-menu-links">
             <li class="header__sm-menu-link">
@@ -99,7 +104,8 @@
             </li>
           </ul>
         </div>
-      </div>
+
+      </nav>
     </header>
 
     <section class="home-hero">
@@ -129,7 +135,8 @@
           </span>
         </h2>
 
-        <div class="services__content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr)); gap: 3rem;">
+
+        <div class="services__content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr)); gap: 3rem;">
           <!-- Web & Software Development -->
           <div class="service-card" style="background: var(--bg-card); padding: 3rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
             <div class="service-icon" style="margin-bottom: 2rem;">
@@ -222,7 +229,8 @@
             A structured, transparent engineering process from initial requirements to delivery.
           </span>
         </h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 2.5rem; max-width: 100rem; margin: 0 auto;">
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 2.5rem; max-width: 100rem; margin: 0 auto;">
           <div style="background: var(--bg-card); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border-color);">
             <span style="font-size: 1.8rem; font-weight: 800; color: var(--accent-primary); display: block; margin-bottom: 1rem;">01. Understand</span>
             <h4 style="font-size: 1.8rem; font-family: var(--font-display); margin-bottom: 1rem; color: var(--text-primary);">Define Requirements</h4>
@@ -275,32 +283,41 @@
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
             <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
+
+              <span>Connect</span>
             </h2>
-            <div class="main-footer__social-cont">
+
+            <nav class="main-footer__social-cont" aria-label="Social media links">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/yusuph-salimu-7818333aa/"
+                aria-label="LinkedIn Profile"
               >
                 <img
                   class="main-footer__icon"
                   src="./assets/png/linkedin-ico.png"
-                  alt="LinkedIn icon"
+
+                  alt=""
+                  aria-hidden="true"
                 />
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://github.com/YusuphSalimu"
+                aria-label="GitHub Profile"
               >
                 <img
                   class="main-footer__icon main-footer__icon--mr-none"
                   src="./assets/png/github-ico.png"
-                  alt="GitHub icon"
+
+                  alt=""
+                  aria-hidden="true"
                 />
               </a>
-            </div>
+
+            </nav>
           </div>
           <div class="main-footer__row main-footer__row-2">
             <h4 class="heading heading-sm text-lt">Yusuph Salimu</h4>
