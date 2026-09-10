@@ -10,7 +10,7 @@ export const projectsData = [
     image: "./assets/jpeg/ecommerce-price-tracker.jpg",
     githubUrl: "https://github.com/YusuphSalimu/ecommerce-price-tracker",
     demoUrl: "https://price-tracker-frontend-cm6t.onrender.com",
-    caseStudyUrl: "./project-1.html",
+    caseStudyUrl: "./projects/ecommerce-price-tracker/index.html",
     featured: true,
     year: "2026"
   },
@@ -25,7 +25,7 @@ export const projectsData = [
     image: "./assets/jpeg/tanzania-stock-prediction.jpg",
     githubUrl: "https://github.com/YusuphSalimu/tanzania-stock-ai",
     demoUrl: "https://tanzania-stock-frontend.onrender.com",
-    caseStudyUrl: "./project-2.html",
+    caseStudyUrl: "./projects/tanzania-stock-prediction/index.html",
     featured: true,
     year: "2026"
   },
@@ -40,7 +40,7 @@ export const projectsData = [
     image: "./assets/jpeg/flyd-XVByfEac5hg-unsplash.jpg",
     githubUrl: "https://github.com/YusuphSalimu/hardware-stores",
     demoUrl: "https://mariwahardwaredodoma.vercel.app/",
-    caseStudyUrl: "./project-3.html",
+    caseStudyUrl: "./projects/hardware-stores/index.html",
     featured: true,
     year: "2026"
   },
@@ -55,7 +55,7 @@ export const projectsData = [
     image: "./assets/jpeg/farm-management.png",
     githubUrl: "https://github.com/YusuphSalimu/farm-management-spring-boot",
     demoUrl: "https://farm-management-system-qewe.onrender.com/",
-    caseStudyUrl: "./project-4.html",
+    caseStudyUrl: "./projects/farm-management-system/index.html",
     featured: true,
     year: "2026"
   },
@@ -70,7 +70,7 @@ export const projectsData = [
     image: "./assets/jpeg/leadPulse AI.png",
     githubUrl: "https://github.com/YusuphSalimu/leadpulse-ai",
     demoUrl: "https://leadpulse-ai-nt9f.onrender.com/",
-    caseStudyUrl: "./project-5.html",
+    caseStudyUrl: "./projects/leadpulse-ai/index.html",
     featured: true,
     year: "2026"
   }

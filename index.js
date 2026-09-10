@@ -109,18 +109,18 @@ document.addEventListener('DOMContentLoaded', () => {
           : ''
 
         row.innerHTML = `
-          <div class="projects__row-img-cont">
-            <img src="${project.image}" alt="${project.title} project screenshot" class="projects__row-img" loading="lazy" decoding="async" />
+          <div class="projects__row-img-cont" style="aspect-ratio: 16 / 9; overflow: hidden; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-card);">
+            <img src="${project.image}" alt="${project.title} project screenshot" class="projects__row-img" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div class="projects__row-content">
             <span style="font-size: 1.3rem; font-weight: 700; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; display: inline-block;">${project.category}</span>
-            <h3 class="projects__row-content-title">${project.title}</h3>
-            <p class="projects__row-content-desc">${project.shortDescription}</p>
+            <h3 class="projects__row-content-title" style="font-family: var(--font-display); font-size: 2.4rem; margin-bottom: 1.5rem; color: var(--text-primary);">${project.title}</h3>
+            <p class="projects__row-content-desc" style="font-size: 1.6rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">${project.shortDescription}</p>
             ${techBadges}
             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="${project.caseStudyUrl}" class="btn btn--med btn--theme dynamicBgClr" aria-label="View ${project.title} case study">View Project</a>
-              ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--med btn--theme-inv" style="border: 2px solid var(--border-color); color: var(--text-primary); padding: 1.2rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.4rem;" aria-label="View ${project.title} source code on GitHub">View Code</a>` : ''}
-              ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--med btn--theme-inv" style="border: 2px solid var(--accent-primary); color: var(--accent-primary); padding: 1.2rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.4rem;" aria-label="View live demo of ${project.title}">Live Demo</a>` : ''}
+              <a href="${project.caseStudyUrl}" class="btn btn--med btn--theme dynamicBgClr" style="padding: 1.2rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.4rem; background: var(--accent-primary); color: #fff;" aria-label="View ${project.title} case study">View Project</a>
+              ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--med btn--theme-inv" style="border: 2px solid var(--border-color); color: var(--text-primary); background: var(--bg-card); padding: 1.2rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.4rem;" aria-label="View ${project.title} source code on GitHub">GitHub</a>` : ''}
+              ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--med btn--theme-inv" style="border: 2px solid var(--accent-primary); color: var(--accent-primary); background: var(--bg-card); padding: 1.2rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.4rem;" aria-label="View live demo of ${project.title}">Live Demo</a>` : ''}
             </div>
           </div>
         `

@@ -4,12 +4,23 @@ This guide explains how to add a new project (e.g., Project #6, #7) to your port
 
 ---
 
-## Step 1: Prepare Project Assets
-1. Place your project showcase screenshot image inside the `./assets/jpeg/` or `./assets/png/` folder (recommended format: `.jpg`, `.png`, or `.webp`, 16:9 aspect ratio).
+## Step 1: Create Project Directory & Assets
+1. Create a new directory under `projects/` using your project slug:
+   ```bash
+   mkdir projects/your-new-project-slug
+   ```
+2. Place your project showcase screenshot image inside the `./assets/jpeg/` or `./assets/png/` folder (recommended format: `.jpg`, `.png`, or `.webp`, 16:9 aspect ratio).
+3. Add any project source files, README, or requirements in `projects/your-new-project-slug/`.
 
 ---
 
-## Step 2: Add Project Data to `data/projects.js`
+## Step 2: Add Case Study Page
+1. Create `projects/your-new-project-slug/index.html`.
+2. Link stylesheet as `../../css/style.css`, assets as `../../assets/...`, and navigation links back to `../../index.html`.
+
+---
+
+## Step 3: Add Project Data to `data/projects.js`
 Open `data/projects.js` and append a new project object to the `projectsData` array:
 
 ```javascript
@@ -24,18 +35,11 @@ Open `data/projects.js` and append a new project object to the `projectsData` ar
     image: "./assets/jpeg/your-project-image.jpg",
     githubUrl: "https://github.com/YusuphSalimu/your-repo-name",
     demoUrl: "https://your-demo-url.onrender.com",
-    caseStudyUrl: "./project-6.html", // Optional: create a case study page if needed
+    caseStudyUrl: "./projects/your-new-project-slug/index.html",
     featured: true,
     year: "2026"
   }
 ```
-
----
-
-## Step 3: (Optional) Create a Dedicated Case Study Page
-If you want a standalone case study page for the project:
-1. Copy an existing case study file (e.g., `project-1.html`) and rename it to `project-6.html`.
-2. Update the page title, meta description, hero heading, overview paragraphs, tools used, and links (`View Code` and `Live Demo`).
 
 ---
 
@@ -63,3 +67,4 @@ If you want a standalone case study page for the project:
    git push origin main
    ```
 4. Render will automatically detect the commit and deploy your updated portfolio live!
+
