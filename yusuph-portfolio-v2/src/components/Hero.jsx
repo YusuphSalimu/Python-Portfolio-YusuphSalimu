@@ -69,7 +69,7 @@ export default function Hero() {
               <ShieldCheck className="w-3.5 h-3.5 text-signal" /> Upwork Verified
             </div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ink-800 border border-ink-700 text-mist-200 text-xs font-medium">
-              <Linkedin className="w-3.5 h-3.5 text-[#0a66c2]" /> LinkedIn Professional
+              <Globe className="w-3.5 h-3.5 text-[#0a66c2]" /> LinkedIn Professional
             </div>
           </div>
         </div>
