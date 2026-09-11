@@ -1,4 +1,42 @@
-# Dopefolio 🔥
+# Yusuph Salimu — Personal Portfolio & Engineering Workspace
+
+Welcome to the official personal portfolio and engineering workspace of **Yusuph Salimu**, Software Engineer and Data Scientist based in Tanzania. 
+
+This modern portfolio is built with **React**, **Vite**, and **Tailwind CSS**, featuring a clean dark-first developer aesthetic, terminal-chrome cards, typewriter animations, project filtering, and interactive case studies. It is optimized for performance and deployed automatically on **Render** as a static site.
+
+---
+
+## Featured Projects 🚀
+
+1. **E-commerce Price Tracker** — Software Engineering & Automation
+   A Python Selenium-powered price tracking bot that monitors products (such as the iPhone 16) across e-commerce websites and stores pricing data for review.
+2. **Stock Price Prediction for the Tanzania Stock Market** — Data Science & Machine Learning
+   A machine learning and data science initiative analyzing historical stock market data from Tanzania to build predictive models for stock price trends.
+3. **Hardware Stores** — Web Development
+   Industrial Hardware Store & E-commerce platform providing high-performance infrastructure solutions designed for Tanzania's growing industrial sector.
+4. **Farm Management System** — Backend & Full-Stack
+   A full-stack web application built with Java, Spring Boot, Spring Data JPA, and PostgreSQL to streamline agricultural and livestock management and financial records.
+5. **LeadPulse AI — Multi-Tenant B2B SaaS Platform** — Software Engineering & Data
+   An independently architected B2B lead generation and web scraping SaaS platform built with Django, Python, Celery, and Redis.
+
+---
+
+## Development & Build Commands 🛠️
+
+```bash
+# Install dependencies
+npm install
+
+# Start local development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+---
+
+Licensed under GPL-3.0 — see LICENSE for details.
 
 ## A Blazing Fast Multipage Portfolio Template for Developers 🚀
 
