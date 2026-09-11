@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { ArrowRight, ShieldCheck, Linkedin } from 'lucide-react'
+import { ArrowRight, ShieldCheck, Globe } from 'lucide-react'
 
 const terminalLines = [
   { text: '$ python train_model.py --dataset tz_stock_market', type: 'prompt' },
