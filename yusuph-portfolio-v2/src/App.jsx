@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import Journey from './components/Journey'
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Journey />
         <section id="skills" className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-ink-800">
           <h2 className="text-3xl font-display font-bold text-white mb-4">Technical Skills</h2>
           <p className="text-mist-300">Placeholder for Skills section.</p>
