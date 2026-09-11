@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { projects } from '../data/projects'
-import { ExternalLink, Github, Eye, Terminal } from 'lucide-react'
+import { ExternalLink, Code, Eye, Terminal } from 'lucide-react'
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
