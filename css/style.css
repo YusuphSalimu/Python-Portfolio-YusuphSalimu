@@ -279,13 +279,16 @@ textarea {
 }
 
 .home-hero {
-  color: #fff;
-  background: linear-gradient(to right, rgba(59, 130, 246, 0.8), rgba(59, 130, 246, 0.8)), url(../../assets/svg/common-bg.svg);
+  color: var(--text-primary);
+  background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 70%), var(--bg-primary);
   background-position: center;
   height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media only screen and (max-width: 37.5em) {
   .home-hero {
@@ -467,6 +470,21 @@ textarea {
   background: linear-gradient(to right, rgba(59, 130, 246, 0.8), rgba(59, 130, 246, 0.8)), url(../../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact__form-container .marquee-track {
+    animation: none !important;
+    transform: none !important;
+    overflow-x: auto;
+  }
 }
 .contact__form-container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
