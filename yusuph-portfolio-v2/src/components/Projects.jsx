@@ -93,7 +93,7 @@ export default function Projects() {
                     disabled
                     className="px-4 py-2 rounded-lg bg-ink-800 text-mist-500 border border-ink-700 text-xs font-semibold uppercase tracking-wider cursor-not-allowed flex items-center gap-1.5 opacity-60"
                   >
-                    <Github className="w-3.5 h-3.5" /> GitHub
+                    <Code className="w-3.5 h-3.5" /> GitHub
                   </button>
                   <button
                     disabled
