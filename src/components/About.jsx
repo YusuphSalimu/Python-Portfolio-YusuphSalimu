@@ -31,17 +31,34 @@ export default function About() {
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-signal/5 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ink-800 border border-ink-700 text-signal-glow text-xs font-mono mb-4">
-            // About
+        {/* Section Header & Profile Avatar */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+          <div className="lg:col-span-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ink-800 border border-ink-700 text-signal-glow text-xs font-mono mb-4">
+              // About
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight leading-[1.15] mb-6">
+              Engineering robust web systems and data-driven intelligence
+            </h2>
+            <p className="text-base sm:text-lg text-mist-300 font-body leading-relaxed">
+              I'm Yusuph Salimu, a Software Engineer and Data Scientist studying Software Engineering at the University of Dodoma, Tanzania. I specialize in building end-to-end digital solutions — from scalable backend architectures and full-stack web applications to automated scraping pipelines and predictive machine learning models. My work bridges clean, responsive frontend interfaces with reliable backend engineering, whether I'm architecting Spring Boot platforms, building Django SaaS products, or analyzing financial market data with Python.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight leading-[1.15] mb-6">
-            Engineering robust web systems and data-driven intelligence
-          </h2>
-          <p className="text-base sm:text-lg text-mist-300 font-body leading-relaxed">
-            I'm Yusuph Salimu, a Software Engineer and Data Scientist studying Software Engineering at the University of Dodoma, Tanzania. I specialize in building end-to-end digital solutions — from scalable backend architectures and full-stack web applications to automated scraping pipelines and predictive machine learning models. My work bridges clean, responsive frontend interfaces with reliable backend engineering, whether I'm architecting Spring Boot platforms, building Django SaaS products, or analyzing financial market data with Python.
-          </p>
+          <div className="lg:col-span-4 flex justify-center">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl bg-ink-900 border-2 border-ink-700 shadow-2xl overflow-hidden group">
+              <img
+                src="/yusuph-salimu.png"
+                alt="Yusuph Salimu"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-transparent to-transparent opacity-60" />
+              <div className="absolute bottom-3 left-3 right-3 text-center">
+                <span className="text-xs font-mono text-signal-glow bg-ink-900/90 px-2.5 py-1 rounded-md border border-ink-700">
+                  Yusuph Salimu
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Skills Grouped Panels Grid */}
